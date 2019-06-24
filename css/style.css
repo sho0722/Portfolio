@@ -1,0 +1,20 @@
+/* 共通のデザイン */
+.screen-height {
+    height: 100vh;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Profileのデザイン */
+#myFoto {
+    border-radius: 50%;
+    height: 50%;
+}
+
+/* Skillのデザイン */
+.logos img {
+    height: 300px;
+}
