@@ -5,18 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/reset.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Portfolio</title>
 </head>
 <body>
     <!-- headerここから -->
     <header>
-        <ul>
-            <li>Profile</li>
-            <li>Skill</li>
-            <li>Works</li>
-            <li>Contact</li>
-        </ul>
+        <!-- ハンバーガーメニュー -->
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="nav">
+            <ul>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#skill">Skill</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>My Portfolio</h1>
     </header>
     <!-- headerここまで -->
 
@@ -26,13 +37,12 @@
             <h2>Profile</h2>
             <img id="myFoto" src="img/myphoto.JPG" alt="">
             <h3>TANAKA SHO</h3>
-            <p>略歴<br>
-                1993年　京都に生まれる<br>
+            <h3>略歴</h3>
+            <p>1993年　京都に生まれる<br>
                 大学卒業後、南米ボリビアの旅行会社でツアーガイドとして働く<br>
-                帰国後、沖縄のプログラミングスクールにてプログラミングを学ぶ。
-            </p>
-            <p>趣味<br>
-            </p>
+                帰国後、沖縄のプログラミングスクールにてプログラミングを学ぶ。</p>
+            <h3>趣味</h3>
+            <p>海外旅行<br>スポーツ観戦</p>
         </div>
         <!-- Profileここまで -->
 
@@ -40,79 +50,124 @@
         <div id="skill">
             <h2>Skill</h2>
             <ul class="logos flex-wrap">
-                <li><img src="img/html5.svg" alt=""></li>
-                <li><img src="img/css3.svg" alt=""></li>
-                <li><img src="img/javascript.svg" alt=""></li>
-                <li><img src="img/jquery.svg" alt=""></li>
-                <li><img src="img/php.svg" alt=""></li>
-                <li><img src="img/wordpress.svg" alt=""></li>
+                <li>
+                    <img src="img/html5.svg" alt="">
+                    <p>経験年数：3ヶ月</p>
+                    <p>★★★</p>
+                </li>
+                <li>
+                    <img src="img/css3.svg" alt="">
+                    <p>経験年数：3ヶ月</p>
+                    <p>★★★</p>
+                </li>
+                <li>
+                    <img src="img/javascript.svg" alt="">
+                    <p>経験年数：3ヶ月</p>
+                    <p>★★★</p>
+                </li>
+                <li>
+                    <img src="img/jquery.svg" alt="">
+                    <p>経験年数：3ヶ月</p>
+                    <p>★★★</p>
+                </li>
+                <li>
+                    <img src="img/php.svg" alt="">
+                    <p>経験年数：3ヶ月</p>
+                    <p>★★★</p>
+                </li>
+                <li>
+                    <img src="img/wordpress.svg" alt="">
+                    <p>経験年数：3ヶ月</p>
+                    <p>★★★</p>
+                </li>
             </ul>
         </div>
         <!-- skillここまで -->
 
         <!-- Worksここから -->
-        <div id="works" class="screen-height">
+        <div id="works">
             <h2>Works</h2>
-            <ul class="flex-wrap">
-                <li>
-                    <h3>Portfolio</h3>
-                    <img src="" alt="">
-                    <a href="">GitHub</a>
-                </li>
-                <li>
-                    <h3>ビンゴゲーム</h3>
-                    <img src="" alt="">
-                    <a href=""></a>
-                    <a href="https://github.com/sho0722/Bingo">GitHub</a>
-                </li>
-                <li>
-                    <h3>占い</h3>
-                    <img src="" alt="">
-                    <a href=""></a>
-                    <a href="https://github.com/sho0722/FortuneGame">GitHub</a>
-                </li>
-                <li>
-                    <h3>コロ助</h3>
-                    <img src="" alt="">
-                    <a href=""></a>
-                    <a href="https://github.com/sho0722/Drawing">GitHub</a>
-                </li>
-                <li>
-                    <h3>ポケモン</h3>
-                    <img src="" alt="">
-                    <a href=""></a>
-                    <a href="https://github.com/sho0722/Pokemon">GitHub</a>
-                </li>
-                <li>
-                    <h3>あいのり</h3>
-                    <img src="" alt="">
-                    <a href=""></a>
-                    <a href="https://github.com/sho0722/Ainori">GitHub</a>
-                </li>
-            </ul>
+            <div class="swiper-container">
+                <ul class="swiper-wrapper production">
+                    <li class="swiper-slide">
+                        <h3>Portfolio</h3>
+                        <a href=""><img src="img/sample-portfolio.png" alt=""></a>
+                        <a href="https://github.com/sho0722/Portfolio">GitHub</a>
+                        <p>HTML/CSS/jQuery</p>
+                    </li>
+                    <li class="swiper-slide">
+                        <h3>北谷観光協会（OJT）</h3>
+                        <a href="http://swallowtail.starfree.jp/chatan-information/"><img src="img/sample-chatan.png" alt=""></a>
+                        <a href="https://github.com/Nobohitoshi/ojtroom">GitHub</a>
+                        <p>HTML/CSS/jQuery/PHP/WordPress</p>
+                    </li>
+                    <li class="swiper-slide">
+                        <h3>ビンゴゲーム</h3>
+                        <a href="https://bingo-bingo.netlify.com/"><img src="img/sample-bingo.png" alt=""></a>
+                        <a href="https://github.com/sho0722/Bingo">GitHub</a>
+                        <p>HTML/CSS/Java Script</p>
+                    </li>
+                    <li class="swiper-slide">
+                        <h3>占い</h3>
+                        <img src="img/sample-omikuji.png" alt="">
+                        <a href="https://omikuji.netlify.com/"></a>
+                        <a href="https://github.com/sho0722/FortuneGame">GitHub</a>
+                        <p>HTML/CSS/jQuery</p>
+                    </li>
+                    <li class="swiper-slide">
+                        <h3>コロ助</h3>
+                        <img src="img/sample-korosuke.png" alt="">
+                        <a href="https://korosuke.netlify.com/"></a>
+                        <a href="https://github.com/sho0722/Drawing">GitHub</a>
+                        <p>HTML/CSS/jQuery/Bootstrap</p>
+                    </li>
+                    <li class="swiper-slide">
+                        <h3>ポケモン</h3>
+                        <img src="img/sample-pokemon.png" alt="">
+                        <a href="https://github.com/sho0722/Pokemon">GitHub</a>
+                        <p>HTML/CSS/jQuery/PHP</p>
+                    </li>
+                    <li class="swiper-slide">
+                        <h3>あいのり</h3>
+                        <img src="img/sample-ainori.png" alt="">
+                        <a href="https://github.com/sho0722/Ainori">GitHub</a>
+                        <p>HTML/CSS/jQuery/PHP/Mysql</p>
+                    </li>
+                </ul>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
         </div>
         <!-- Worksここまで -->
 
         <!-- Contactここから -->
-        <div id="contact" class="screen-height">
+        <div id="contact" class="flex-column">
             <h2>Contact</h2>
-
+            <i class="far fa-envelope"> t_sho0722@yahoo.co.jp</i>
+            <i class="fab fa-facebook-square"> Sho Tanaka</i>
         </div>
         <!-- Contactここまで -->
     </main>
 
     <!-- footerここから -->
     <footer>
-        <ul>
-            <li>Profile</li>
-            <li>Skill</li>
-            <li>Works</li>
-            <li>Contact</li>
-        </ul>
+        <nav>
+            <ul>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#skill">Skill</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </footer>
     <!-- footerここから -->
 
+    <!-- ページにトップに移動するアイコン -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/swiper.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
