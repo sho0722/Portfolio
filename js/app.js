@@ -9,15 +9,15 @@ $(function () {
         $(this).children().eq(2).toggleClass("hamburger-bottom");
     });
 
-    var swiper = new Swiper('.swiper-container', {
+    let swiper = new Swiper('.swiper-container', {
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
-        loop: true,
+        // loop: true,
         speed: 1500,
         autoplay: {
-            delay: 3000,
+            delay: 1000,
             disableOnInteraction: true
         },
         effect: "cube",
