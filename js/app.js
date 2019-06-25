@@ -9,22 +9,43 @@ $(function () {
         $(this).children().eq(2).toggleClass("hamburger-bottom");
     });
 
+    // スクロールした時の処理
+    $(window).scroll(function() {
+        let scrollTop = $(window).scrollTop();
+        if (scrollTop == 0) {
+            $("#airplane").removeClass("fly");
+        } else if (scrollTop >= 600) {
+            $("#airplane").fadeIn();
+        } else {
+            $("#airplane").hide();
+        };
+    });
+    
+    $("#airplane").on("click", function() {
+        $(this).addClass("fly");
+        $("html,body").animate({scrollTop:0},"300");
+        // setTimeout(function() {
+        //     $("#airplane").fadeOut();
+        // }, 2000);
+    });
+
+    // swiper
     let swiper = new Swiper('.swiper-container', {
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
-        // loop: true,
+        loop: true,
         speed: 1500,
         autoplay: {
             delay: 1000,
             disableOnInteraction: true
         },
-        effect: "cube",
+        effect: "coverflow",
         pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
         }
-
     });
+
 });
