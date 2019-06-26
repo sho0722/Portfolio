@@ -1,8 +1,4 @@
 /* 共通のデザイン */
-.screen-height {
-    height: 100vh;
-}
-
 .flex-wrap {
     display: flex;
     flex-wrap: wrap;
@@ -117,25 +113,64 @@ header {
 
 #myFoto {
     border-radius: 50%;
-    height: 50%;
+    height: 100px;
 }
 
 /* Skillのデザイン */
-#skill {
-    background-color: transparent;
+.logos {
+    position: relative;
+    margin: 0 auto;
+    width: 650px;
+    height: 650px;  
 }
 
 .logos li {
-    margin: 0 50px 50px 50px;
-}
-
-.logos li:last-child {
-    margin-right: 0;
+    position: absolute;
+    height: 150px;
+    width: 150px;
 }
 
 .logos img {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
+    -webkit-filter: sepia(100%);
+    filter: sepia(100%);
+    -webkit-transition: .2s ease;
+    transition: .2s ease;
+    cursor: pointer;
+}
+
+.logos img:hover {
+    -webkit-filter: sepia(0);
+    filter: sepia(0)
+}
+
+#over {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.lightbox {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+}
+
+.lightbox img {
+    height: 150px;
+    width: 150px;
 }
 
 /* Worksのデザイン */
@@ -159,9 +194,7 @@ header {
 }
 
 /* Contactのデザイン */
-#contact {
 
-}
 
 /* footerのデザイン */
 footer ul {
@@ -183,9 +216,9 @@ footer li:last-child {
     position: fixed;
     bottom: 5%;
     right: 3%;
-    color: blue;
+    color: #1E90FF;
     opacity: 0.5;
-    transform: rotate(-135deg);
+    transform: rotate(-160deg);
     transition: 0.5s;
     cursor: pointer;
 }
@@ -195,13 +228,13 @@ footer li:last-child {
 }
 
 .fly {
-    animation: fly 2s ease-in;
+    animation: fly 1.5s ease-in;
 }
 
 @keyframes fly {
     100% {
         right: 100%;
         bottom: 100%;
-        height: 200%;
+        transform: scale(10,10);
     }
 }
