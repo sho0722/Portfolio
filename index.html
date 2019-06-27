@@ -13,6 +13,15 @@
 <body>
     <!-- headerここから -->
     <header>
+        <div class="wrapper">
+            <div style="background-image: url(img/Sydney.JPG)"><span style="color: #FF6633">Hello World</span></div>
+            <div style="background-image: url(img/Lisbon.JPG)"><span>Olá Mundo</span></div>
+            <div style="background-image: url(img/Vienna.JPG)"><span style="color: #FF00FF">Hallo Welt</span></div>
+            <div style="background-image: url(img/Uyuni.JPG)"><span>Hola Mundo</span></div>
+            <div style="background-image: url(img/AngkorWat.JPG)"><span style="color: #FF0033">សួស្តី​ពិភពលោក</span></div>
+            <div style="background-image: url(img/Ha.JPG)"><span style="color: #33CC00">སྐུ༌གཟུས༌བཟང༌པོས༌ལགས།</span></div>
+            <div style="background-image: url(img/Anman.JPG)"><span style="color: #3300FF">مرحبا بالعالم</span></div>
+        </div>
         <!-- ハンバーガーメニュー -->
         <div class="hamburger">
             <span></span>
@@ -27,15 +36,17 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <h1>My Portfolio</h1>
     </header>
     <!-- headerここまで -->
 
     <main>
+        <div class="myportfolio">
+            <h1>My Portfolio</h1>
+        </div>
         <!-- Profileここから -->
         <section id="profile">
             <h2>Profile</h2>
-            <img id="myFoto" src="img/myphoto.JPG" alt="">
+            <img id="myFoto" src="img/lapulapu.JPG" alt="">
             <h3>TANAKA SHO</h3>
             <h3>略歴</h3>
             <p>1993年　京都に生まれる<br>
@@ -52,26 +63,38 @@
             <ul class="logos">
                 <li>
                     <img src="img/html5.svg" alt="">
+                    <p class="experience">経験年数：3ヶ月</p>
+                    <p class="star">★★★☆☆</p>
                 </li>
                 <li>
                     <img src="img/css3.svg" alt="">
+                    <p class="experience">経験年数：3ヶ月</p>
+                    <p class="star">★★★☆☆</p>
                 </li>
                 <li>
                     <img src="img/javascript.svg" alt="">
+                    <p class="experience">経験年数：2ヶ月</p>
+                    <p class="star">★★★☆☆</p>
                 </li>
                 <li>
                     <img src="img/jquery.svg" alt="">
+                    <p class="experience">経験年数：2ヶ月</p>
+                    <p class="star">★★★☆☆</p>
                 </li>
                 <li>
                     <img src="img/php.svg" alt="">
+                    <p class="experience">経験年数：1ヶ月</p>
+                    <p class="star">★★★☆☆</p>
                 </li>
                     <li>
                     <img src="img/wordpress.svg" alt="">
+                    <p class="experience">経験年数：1ヶ月</p>
+                    <p class="star">★★★☆☆</p>
                 </li>
             </ul>
         </section>
         <!-- skillここまで -->
-
+        
         <!-- Worksここから -->
         <section id="works">
             <h2>Works</h2>
@@ -133,8 +156,11 @@
         <!-- Contactここから -->
         <section id="contact" class="flex-column">
             <h2>Contact</h2>
-            <i class="far fa-envelope"> t_sho0722@yahoo.co.jp</i>
-            <i class="fab fa-facebook-square"> Sho Tanaka</i>
+            <div class="info flex-column">
+                <i class="far fa-envelope"> t_sho0722@yahoo.co.jp</i>
+                <i class="fab fa-facebook-square"> Sho Tanaka</i>
+                <i class="fab fa-github"> <a href="https://github.com/sho0722">sho0722</a></i>
+            </div>
         </section>
         <!-- Contactここまで -->
     </main>
@@ -142,11 +168,11 @@
     <!-- footerここから -->
     <footer>
         <nav>
-            <ul>
-                <li><a href="#profile">Profile</a></li>
-                <li><a href="#skill">Skill</a></li>
-                <li><a href="#works">Works</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="links">
+                <li><a href="#profile"><i class="far fa-thumbs-up"></i> Profile</a></li>
+                <li><a href="#skill"><i class="far fa-thumbs-up"></i> Skill</a></li>
+                <li><a href="#works"><i class="far fa-thumbs-up"></i> Works</a></li>
+                <li><a href="#contact"><i class="far fa-thumbs-up"></i> Contact</a></li>
             </ul>
         </nav>
     </footer>

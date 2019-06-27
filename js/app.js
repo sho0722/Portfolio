@@ -9,6 +9,25 @@ $(function () {
         $(this).children().eq(2).toggleClass("hamburger-bottom");
     });
 
+    // headerのスライドショー
+    $('.wrapper div:gt(0)').hide();
+    var interval = 4000,
+        anim = (function() {
+        var i = 0,
+        timing = interval / 1000 * 60;
+        return function() {
+            if (i % timing === 0) {
+                $('.wrapper div:first-child').fadeOut(2000).next('div').fadeIn(2000).end().appendTo('.wrapper');
+            };
+            i++;
+        };
+    })();
+
+    (function animloop() {
+      anim();
+      window.requestAnimationFrame(animloop);
+    })();
+
     // スクロールした時の処理
     $(window).scroll(function() {
         let scrollTop = $(window).scrollTop();
@@ -45,29 +64,27 @@ $(function () {
 
     // スキルのliをクリックしてlightbox
     li.on("click", function() {
-        // クリックされたliの親要素のsectionを取得
         let section = $(this).parents("section");
 
-        // クリックされたliの子要素のimgタグのsrcを取得
         let imgSrc = $(this).children("img").attr("src");
+        let experience = $(this).find($(".experience")).text();
+        let star = $(this).find($(".star")).text();
 
-        // id = "over"のdivタグを追加
         $('<div id = "over">').appendTo($(section)).hide().fadeIn(500);
-
-        // class = "lightbox"のdivタグを追加
         $('<div class = "lightbox">').appendTo($("#over")).hide().fadeIn(1000);
 
-        //上記のdivタグの中に変数imgSrcを追加
+        //.lightboxの中にimgSrcとexperienceとstarを追加
         $("<img>").attr("src", imgSrc).appendTo($(".lightbox")).hide().fadeIn(1500);
+        $("<p>").text(experience).appendTo($(".lightbox")).hide().fadeIn(1500);
+        $("<p>").text(star).appendTo($(".lightbox")).hide().fadeIn(1500);
 
         //背景をクリックしてタグを消去
         $("#over").click(function(e) {
-
             // lightboxのdivをクリックした時は消去されない
             if ($(e.target).is(".lightbox")) {
                 return;
             
-            //アイコンをクリックした時は消去されない
+            //アイコンをクリックした時も消去されない
             } else if ($(e.target).is("i")) {
                 return;
 
@@ -89,13 +106,22 @@ $(function () {
         loop: true,
         speed: 1500,
         autoplay: {
-            delay: 1000,
+            delay: 3000,
             disableOnInteraction: true
         },
         effect: "coverflow",
         pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
-        }
+        },
+    });
+
+    // Footerのリンクのアニメーション
+    let link = $(".links").children("li");
+    link.on("mouseover", function() {
+        $(this).find("i").addClass("waving");
+    });
+    link.on("mouseout", function() {
+        $(this).find("i").removeClass("waving");
     });
 });

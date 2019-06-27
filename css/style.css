@@ -1,8 +1,9 @@
 /* 共通のデザイン */
-.flex-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+body {
+    background: url(../img/bg1.JPG);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 
 .flex-column {
@@ -14,7 +15,7 @@
 h1 {
     font-size: 70px;
     color: #fff;
-    text-align: center;
+    padding: 20% 0 0 10%;
 }
 
 h2 {
@@ -26,11 +27,25 @@ h2 {
 h3 {
     font-size: 30px;
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN','ＭＳ Ｐ明朝','MS PMincho',sans-serif;
+    color: #fff;
 }
 
 a {
     text-decoration: none;
+}
+
+p {
+    line-height: 25px;
+    margin-bottom: 25px;
+}
+
+a, p {
+    font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',sans-serif;
 }
 
 #profile, #skill, #works, #contact {
@@ -38,12 +53,29 @@ a {
 }
 
 /* headerのデザイン */
-header {
-    background-image: url(../img/Lisbon.JPG);
+.wrapper {
+    width: 100%;
+    height: 100vh;
+}
+
+.wrapper div {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper span {
+    font-size: 80px;
+    color: #fff;
+    font-family: 'Times New Roman','Trebuchet MS',sans-serif;
 }
 
 /* ハンバーガーメニュー */
@@ -93,30 +125,56 @@ header {
     padding: 20px;
     background-color: #fff;
     opacity: 0.8;
-    border: 3px solid #000;
+    border: 3px solid #000066;
+    border-radius: 5px;
     border-left: none;
 }
 
 #nav ul li {
     margin-bottom: 15px;
     font-size: 20px;
+    transition: 0.5s
+}
+
+#nav ul li a {
+    color: #000066;
+}
+
+#nav ul li:hover {
+    text-decoration: underline;
 }
 
 #nav ul li:last-child {
     margin-bottom: 0;
 }
 
+.myportfolio {
+    background: url(../img/bg2.JPG);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
 /* Profileのデザイン */
 #profile {
+    height: 100vh;
     text-align: center;
+    background-color: #000066;
+    color: #fff;
 }
 
 #myFoto {
     border-radius: 50%;
-    height: 100px;
+    height: 200px;
+    margin-bottom: 20px;
 }
 
 /* Skillのデザイン */
+#skill h2 {
+    margin-bottom: 0;
+}
+
 .logos {
     position: relative;
     margin: 0 auto;
@@ -130,10 +188,14 @@ header {
     width: 150px;
 }
 
+.logos li p {
+    display: none;
+}
+
 .logos img {
     height: 150px;
     width: 150px;
-    -webkit-filter: sepia(100%);
+    -webkit-filter: sepia(50%);
     filter: sepia(100%);
     -webkit-transition: .2s ease;
     transition: .2s ease;
@@ -162,6 +224,7 @@ header {
     width: 300px;
     height: 300px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.8);
@@ -171,6 +234,15 @@ header {
 .lightbox img {
     height: 150px;
     width: 150px;
+    margin-bottom: 30px;
+}
+
+.lightbox p {
+    margin-bottom: 20px;
+}
+
+.lightbox p:last-child {
+    margin-bottom: 0;
 }
 
 /* Worksのデザイン */
@@ -193,10 +265,52 @@ header {
     bottom: -20px !important;
 }
 
-/* Contactのデザイン */
+.swiper-slide a {
+    margin: 15px 0;
+    color: #fff;
+    font-size: 25px;
+    transition: 0.3s;
+}
 
+.swiper-slide a:hover {
+    color: #FF3300;
+}
+
+.swiper-slide p {
+    font-size: 20px;
+    color: #fff;
+}
+
+/* Contactのデザイン */
+.info {
+    border-right: 5px solid #000066;
+    border-left: 5px solid #000066;
+    border-radius: 10px;
+    padding: 20px 10%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.info i {
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.info i:last-child {
+    margin-bottom: 0;
+}
+
+.info i, .info a {
+    color: #000066;
+    font-style: italic;
+    font-weight: bold;
+}
 
 /* footerのデザイン */
+footer {
+    background-color: #AEFFBD;
+    padding: 35px 0;
+}
+
 footer ul {
     display: flex;
     justify-content: center;
@@ -206,8 +320,22 @@ footer li {
     margin-right: 30px;
 }
 
+footer li a {
+    color: #003366;
+}
+
 footer li:last-child {
     margin-right: 0;
+}
+
+.waving {
+    animation: wave 0.5s infinite alternate linear;
+}
+
+@keyframes wave {
+    100% {
+        transform: rotate(-45deg);
+    }
 }
 
 /* ページトップに移動するアイコンのデザイン */
